@@ -8,9 +8,6 @@ const PostModel = require('../models/PostModel');
 const dotenv = require("dotenv");
 const ParseError = require('../utils/ParseErrors');
 process.env.DB_Url = "mongodb://127.0.0.1:27017/RNClient";
-mongoose.set('useNewUrlParser', true);
-mongoose.set('useFindAndModify', false);
-mongoose.set('useCreateIndex', true);
 
 router.post('/api/register', async (req, res) => {
     const post = new PostModel({
